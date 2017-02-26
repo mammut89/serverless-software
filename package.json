@@ -4,7 +4,7 @@
   "description": "Serverless architecture",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --config react-bundles.webpack.config.js && webpack",
     "watch": "webpack --watch"
   },
   "author": "Mo Amini",
