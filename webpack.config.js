@@ -34,16 +34,20 @@ module.exports = {
     ]
   },
   plugins: [
-     new webpack.optimize.UglifyJsPlugin({
-       minimize: true,
-       compress: {
-         warnings: false
-       }
-     }),
-     new HappyPack({
-       id: 'jsx',
-       threads: 4,
-       loaders: [ 'babel-loader?cacheDirectory' ]
-     })
-   ]
+    new webpack.DllReferencePlugin({
+      context: '.',
+      manifest: require('./public/react-manifest.json')
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      minimize: true,
+      compress: {
+        warnings: false
+      }
+    }),
+    new HappyPack({
+      id: 'jsx',
+      threads: 4,
+      loaders: [ 'babel-loader?cacheDirectory' ]
+    })
+  ]
 }
