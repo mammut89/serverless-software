@@ -1,0 +1,20 @@
+@font-face {
+    font-family:"Simplifica";
+    src: url("SIMPLIFICA.ttf")
+}
+
+.heading {
+    font-family:'Simplifica', sans-serif;
+    font-size: 6em;
+    line-height: 100%;
+    display:block;
+    padding-top: 0.4em;
+    padding-bottom: 1em;
+    color: black;
+}
+
+.background {
+  background: url('images/cumulonimbus-compressed.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+}
