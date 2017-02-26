@@ -4,11 +4,10 @@
   "description": "Serverless architecture",
   "main": "index.js",
   "scripts": {
-    "test": "standard",
     "build": "webpack",
     "watch": "webpack --watch"
   },
-  "author": "Mo",
+  "author": "Mo Amini",
   "license": "MIT",
   "dependencies": {
     "babel-preset-stage-2": "^6.22.0",
@@ -33,7 +32,8 @@
     "json-loader": "^0.5.4",
     "webpack": "^1.12.13"
   },
-  "directories": {
-    "test": "test"
+  "repository" : {
+      "type" : "git",
+      "url" : "https://github.com/mammut89/serverless-software.git"
   }
 }
