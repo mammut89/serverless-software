@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack');
 const CompressionPlugin = require("compression-webpack-plugin");
+const HappyPack = require('happypack');
 
 
 module.exports = {
@@ -11,7 +12,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.json' ]
+    extensions: ['', '.js', '.jsx' ]
   },
   stats: {
     colors: true,
@@ -29,11 +30,7 @@ module.exports = {
     loaders: [
       {
         test: /\.jsx?$/,
-        loader: 'babel-loader'
-      },
-      {
-        test: /\.json$/,
-        loader: 'json-loader'
+        loader: 'happypack/loader?id=jsx'
       }
     ]
   },
@@ -43,6 +40,11 @@ module.exports = {
        compress: {
          warnings: false
        }
+     }),
+     new HappyPack({
+       id: 'jsx',
+       threads: 4,
+       loaders: [ 'babel-loader?cacheDirectory' ]
      })
    ]
 }
