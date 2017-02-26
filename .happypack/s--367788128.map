@@ -1,1 +1,0 @@
-{"version":3,"sources":["node_modules/react-dom/index.js"],"names":["module","exports","require"],"mappings":"AAAA;;AAEAA,OAAOC,OAAP,GAAiBC,QAAQ,oBAAR,CAAjB","file":"index.js","sourceRoot":"/Users/mo/serverless-software","sourcesContent":["'use strict';\n\nmodule.exports = require('react/lib/ReactDOM');\n"]}
