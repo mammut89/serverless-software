@@ -23,7 +23,7 @@
 
 @media (min-width: 481px) and (max-width: 1440px) {
   .background {
-    background: url('images/laptop-background.jpg')no-repeat center center fixed;
+    background: url('images/desktop-background.jpg')no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
   }
