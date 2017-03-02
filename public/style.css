@@ -13,6 +13,16 @@
     color: black;
 }
 
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: 4em;
+    opacity: 0.6;
+    background-color: black;
+}
+
 @media (max-width: 480px) {
   .background {
     background: url('images/mobile-background.jpg') no-repeat center center fixed;
