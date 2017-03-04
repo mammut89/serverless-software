@@ -4,14 +4,13 @@
   "description": "Serverless architecture",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config react-bundles.webpack.config.js && webpack",
+    "build": "webpack --config react-bundles.webpack.config.js && webpack ",
     "watch": "webpack --watch"
   },
   "author": "Mo Amini",
   "license": "MIT",
   "dependencies": {
     "babel-preset-stage-2": "^6.22.0",
-    "compression-webpack-plugin": "^0.3.2",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-fontawesome": "^1.5.0",
