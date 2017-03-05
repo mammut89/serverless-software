@@ -24,10 +24,7 @@ module.exports = {
         test: /\.jsx$/,
         enforce: "pre",
         loader: 'babel-loader',
-        exclude: /node_modules/,
-        query: {
-            presets: ['es2015']
-        }
+        exclude: /node_modules/
       }
     ],
     loaders: [
