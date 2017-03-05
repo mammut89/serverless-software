@@ -31,6 +31,10 @@ module.exports = {
       {
         test: /\.jsx?$/,
         loader: 'happypack/loader?id=jsx'
+      },
+      {
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass']
       }
     ]
   },

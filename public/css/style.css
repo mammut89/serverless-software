@@ -1,6 +1,6 @@
 @font-face {
     font-family:"Simplifica";
-    src: url("SIMPLIFICA.ttf")
+    src: url("../fonts/SIMPLIFICA.ttf")
 }
 
 .heading {
@@ -24,7 +24,7 @@
 
 @media (max-width: 480px) {
   .background {
-    background: url('images/mobile-background.jpg') no-repeat center center fixed;
+    background: url('../images/mobile-background.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
   }
@@ -32,7 +32,7 @@
 
 @media (min-width: 481px) and (max-width: 1440px) {
   .background {
-    background: url('images/laptop-background.jpg') no-repeat center center fixed;
+    background: url('../images/laptop-background.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
   }
@@ -40,7 +40,7 @@
 
 @media (min-width: 1441px) {
   .background {
-    background: url('images/desktop-background.jpg') no-repeat center center fixed;
+    background: url('../images/desktop-background.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
   }
