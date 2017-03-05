@@ -11,7 +11,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['', '.js', '.jsx' ]
+    extensions: ['.js', '.jsx' ]
   },
   stats: {
     colors: true,
@@ -19,11 +19,15 @@ module.exports = {
     chunks: false
   },
   module: {
-    preloaders: [
+    rules: [
       {
-        test: /\.jsx?$/,
-        loader: "eslint-loader",
-        exclude: /node_modules/
+        test: /\.jsx$/,
+        enforce: "pre",
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+        query: {
+            presets: ['es2015']
+        }
       }
     ],
     loaders: [
