@@ -24,7 +24,7 @@
 
 @media (max-width: 480px) {
   .background {
-    background: url('../images/mobile-background.jpg') no-repeat center center fixed;
+    background: linear-gradient(rgba(32, 49, 255, 0.6),rgba(255,255,255,0.6)) ,url('../images/mobile-background.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
   }
@@ -32,7 +32,7 @@
 
 @media (min-width: 481px) and (max-width: 1440px) {
   .background {
-    background: url('../images/laptop-background.jpg') no-repeat center center fixed;
+    background: linear-gradient(rgba(32, 49, 255, 0.6),rgba(255,255,255,0.6)), url('../images/laptop-background.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
   }
@@ -40,7 +40,7 @@
 
 @media (min-width: 1441px) {
   .background {
-    background: url('../images/desktop-background.jpg') no-repeat center center fixed;
+    background: linear-gradient(rgba(32, 49, 255, 0.6),rgba(255,255,255,0.6)) , url('../images/desktop-background.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
   }
