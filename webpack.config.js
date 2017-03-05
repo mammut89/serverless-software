@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack');
 const HappyPack = require('happypack');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 
 module.exports = {
@@ -20,18 +21,22 @@ module.exports = {
   },
   module: {
     rules: [{
-      test: /\.jsx$/,
-      enforce: "pre",
-      loader: 'babel-loader',
-      exclude: /node_modules/
-    }],
-    loaders: [{
+        test: /\.jsx$/,
+        enforce: "pre",
+        use: 'babel-loader',
+        exclude: /node_modules/
+      },
+      {
         test: /\.jsx?$/,
-        loader: 'happypack/loader?id=jsx'
+        use: 'happypack/loader?id=jsx',
+        exclude: /node_modules/
       },
       {
         test: /\.scss$/,
-        loaders: ['style', 'css', 'sass']
+        loader: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'sass-loader'],
+        })
       }
     ]
   },
@@ -55,6 +60,9 @@ module.exports = {
       id: 'jsx',
       threads: 4,
       loaders: ['babel-loader?cacheDirectory']
+    }),
+    new ExtractTextPlugin({
+      filename: 'app.css'
     })
   ]
 }

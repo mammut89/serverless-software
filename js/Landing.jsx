@@ -1,7 +1,7 @@
 const React = require('react')
 const { Link } = require('react-router')
 var FontAwesome = require('react-fontawesome');
-
+require('../public/css/sass/style.scss');
 
 
 const Landing = () => (
@@ -24,5 +24,6 @@ const Landing = () => (
     </div>
   </div>
 )
+
 
 module.exports = Landing
