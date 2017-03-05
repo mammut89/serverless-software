@@ -11,7 +11,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['.js', '.jsx' ]
+    extensions: ['.js', '.jsx']
   },
   stats: {
     colors: true,
@@ -19,16 +19,13 @@ module.exports = {
     chunks: false
   },
   module: {
-    rules: [
-      {
-        test: /\.jsx$/,
-        enforce: "pre",
-        loader: 'babel-loader',
-        exclude: /node_modules/
-      }
-    ],
-    loaders: [
-      {
+    rules: [{
+      test: /\.jsx$/,
+      enforce: "pre",
+      loader: 'babel-loader',
+      exclude: /node_modules/
+    }],
+    loaders: [{
         test: /\.jsx?$/,
         loader: 'happypack/loader?id=jsx'
       },
@@ -43,6 +40,11 @@ module.exports = {
       context: '.',
       manifest: require('./public/react-manifest.json')
     }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production')
+      }
+    }),
     new webpack.optimize.UglifyJsPlugin({
       minimize: true,
       compress: {
@@ -52,7 +54,7 @@ module.exports = {
     new HappyPack({
       id: 'jsx',
       threads: 4,
-      loaders: [ 'babel-loader?cacheDirectory' ]
+      loaders: ['babel-loader?cacheDirectory']
     })
   ]
 }

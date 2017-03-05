@@ -16,6 +16,11 @@ module.exports = {
       path: 'public/react-manifest.json',
       name: 'react_lib'
     }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production')
+      }
+    }),
     new webpack.optimize.UglifyJsPlugin({
       minimize: true,
       compress: {
