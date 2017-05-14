@@ -1,7 +1,18 @@
 const React = require('react')
 const { Link } = require('react-router')
+const AuthService = require('./AuthService')
 var FontAwesome = require('react-fontawesome');
 require('../public/css/sass/style.scss');
+
+const auth = new AuthService('Qf8kzqMP4z4dlup6vdZqxaTLAFcmu_Ee', 'serveless-software.eu.auth0.com');
+
+var loggedInText = '';
+
+if(auth.loggedIn() === true) {
+  loggedInText = 'Congratulations youre authenticated'
+} else {
+  auth.login();
+}
 
 
 const Landing = () => (
@@ -16,6 +27,7 @@ const Landing = () => (
             spin
             style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
           />
+          <h3>{loggedInText}</h3>
         </div>
       </div>
     </div>

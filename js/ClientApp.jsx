@@ -2,7 +2,7 @@ const React = require('react')
 const ReactDOM = require('react-dom')
 const Landing = require('./Landing')
 const ReactRouter = require('react-router')
-
+const AuthService = require('./AuthService')
 
 const { Router, Route, IndexRoute, hashHistory } = require('react-router')
 
